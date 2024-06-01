@@ -1,0 +1,87 @@
+.editProjects {
+  > p {
+    font-family: $font-text;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    color: #545454;
+    margin-bottom: $unit-m;
+  }
+
+  > div:last-of-type {
+    max-width: 500px;
+  }
+
+  > div {
+    position: relative;
+    // max-width: 500px;
+
+    > div:nth-of-type(1) {
+      > input {
+        padding-left: 16px;
+      }
+    }
+  }
+
+  > div:nth-of-type(2) {
+    max-width: 500px;
+    min-height: 200px;
+    flex-direction: column;
+    position: relative;
+    padding-top: 16px;
+
+    > div:nth-of-type(1) {
+      input {
+        padding-left: 16px;
+      }
+    }
+
+    :global(.formLabel) {
+      top: -8px;
+      transform: translateY(0);
+      font-size: 12px;
+    }
+  }
+
+  &__projects {
+    display: flex;
+    background: $light-grey;
+    padding: $unit-m;
+    margin-bottom: $unit-l;
+    gap: $unit-m;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include laptop {
+      flex-flow: row wrap;
+      align-items: unset;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__add__button {
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    column-gap: 12px;
+    margin-left: auto;
+    margin-top: $unit-l;
+    margin-bottom: $unit-m;
+  }
+
+  &__symbol {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    color: $red;
+    z-index: 2;
+  }
+}

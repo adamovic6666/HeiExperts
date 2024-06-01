@@ -1,0 +1,4 @@
+node_modules
+.next
+strapi.config.json
+.env*.local

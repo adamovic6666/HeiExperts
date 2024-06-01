@@ -1,0 +1,58 @@
+.education {
+  @include card($red);
+  margin-bottom: 0;
+  min-height: 362px;
+
+  p {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  position: relative;
+  padding-bottom: 48px;
+
+  @include laptop {
+    min-height: 362px;
+  }
+
+  h3,
+  p,
+  * {
+    color: white !important;
+    font-family: $font-text !important;
+  }
+
+  span,
+  strong {
+    background-color: transparent !important;
+    color: white !important;
+  }
+
+  :global(.title--with-icon) {
+    border-bottom: 2px solid white;
+  }
+
+  :global(.editPen) {
+    bottom: 16px;
+    right: 8px;
+    top: unset;
+    width: max-content;
+    height: max-content;
+  }
+
+  &__edit {
+    top: unset;
+    bottom: 16px;
+  }
+
+  button {
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}

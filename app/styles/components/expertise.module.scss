@@ -1,0 +1,59 @@
+.expertise {
+  @include card($white);
+  padding-bottom: $unit * 6;
+  position: relative;
+  margin-bottom: 0;
+  min-height: 362px;
+
+  p {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  * {
+    color: $text-color !important;
+    font-family: $font-text !important;
+  }
+
+  @include laptop {
+    min-height: 362px;
+  }
+
+  &__edit {
+    top: unset;
+    bottom: $unit-m;
+  }
+
+  &__title {
+    padding-right: $unit-xl;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 0 24px;
+
+    @include laptop {
+      padding-bottom: 26px;
+    }
+
+    h3 {
+      margin-bottom: $unit-m;
+
+      @include laptop {
+        margin-bottom: 0;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: $unit-m;
+      right: $unit-m;
+      display: inline-block;
+      width: 30px;
+      height: 21px;
+      background-image: url("../assets/comma.svg");
+      background-size: 30px;
+      background-repeat: no-repeat;
+    }
+  }
+}

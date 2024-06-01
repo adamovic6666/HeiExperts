@@ -1,0 +1,12 @@
+services:
+  app:
+    image: wodby/node:${NODE_TAG}
+    container_name: "${PROJECT_NAME}_app"
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    command: >
+      sh -c 'npm run dev'
+    labels:
+      - "traefik.http.services.${PROJECT_NAME}_app.loadbalancer.server.port=3000"
+      - "traefik.http.routers.${PROJECT_NAME}_app.rule=Host(`${PROJECT_BASE_URL}`)"

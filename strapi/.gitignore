@@ -1,0 +1,12 @@
+############################
+# Strapi
+############################
+
+*.cache
+build
+public/uploads
+.strapi-updater.json
+node_modules
+
+# Env
+.env.local

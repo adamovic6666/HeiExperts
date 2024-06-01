@@ -1,0 +1,28 @@
+.termsModal {
+  background-color: white;
+  z-index: 1000;
+
+  width: 100%;
+  max-width: 90vw;
+  min-height: unset;
+  padding: 20px;
+
+  @include tablet {
+    width: 900px;
+  }
+
+  &__close {
+    position: absolute;
+    background: #222;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  button {
+    margin-left: auto;
+    margin-top: $unit-xxl;
+  }
+}

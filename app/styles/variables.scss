@@ -1,0 +1,42 @@
+// unit
+$unit: 8px;
+$unit-s: $unit / 2;
+$unit-m: $unit * 2;
+$unit-l: $unit * 3;
+$unit-xl: $unit * 4;
+$unit-xxl: $unit * 5;
+
+// colors
+$red-text: #cc0130;
+$red: #c61826;
+$dark-red: #9b131e;
+$darkened-red: #8e0122;
+$light-grey: #f4f1ea;
+$white: #fff;
+$text-color: #545454;
+$text-color-dark: #222222;
+$footer-bg-color: #222;
+
+// container
+$container: 960px;
+$container-small: 780px;
+$container-medium: 1260px;
+
+// border
+$border-radius: $unit-xxl;
+
+// font
+$text-mobile-font: 16px;
+$text-font: 16px;
+
+//fonts
+$font-text: sans-serif, "Roboto";
+$font-title: sans-serif, "Ubuntu";
+
+@mixin card($color) {
+  background-color: $color;
+  padding: 16px;
+  box-shadow: 0 4px 4px #0000000d;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}

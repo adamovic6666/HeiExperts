@@ -1,0 +1,272 @@
+.editConnectedProfiles {
+  max-width: 500px;
+  margin-top: $unit-l;
+  position: relative;
+  min-height: 120px;
+
+  &__profiles__mobile {
+    display: block;
+    width: 100vw;
+    transform: translateX(-20px);
+
+    :global(.arrow-prev),
+    :global(.arrow-next) {
+      display: none;
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
+  &__profiles__desktop {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    column-gap: $unit-xxl;
+    margin-bottom: $unit-xxl;
+    position: relative;
+    flex-direction: column;
+
+    &__loading {
+      @include laptop {
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.2s ease;
+      }
+    }
+
+    @include laptop {
+      flex-direction: row;
+      // overflow: hidden;
+    }
+
+    > div:nth-of-type(2) {
+      position: fixed;
+      z-index: 11;
+      top: 136px;
+      left: 0px;
+
+      :global(#filter-img) {
+        @include laptop {
+          transform: translate(12px, 4px);
+        }
+      }
+
+      @include laptop {
+        position: absolute;
+        right: 364px;
+        left: unset !important;
+        top: -8px;
+      }
+
+      @include laptop-l {
+        right: 368px;
+      }
+    }
+  }
+
+  input {
+    margin-bottom: 0;
+  }
+
+  &__profiles,
+  &__search {
+    width: 100%;
+    position: relative;
+
+    > button {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      display: flex;
+
+      @include laptop {
+        display: none;
+        top: $unit;
+      }
+
+      > img {
+        margin: 0 auto;
+      }
+    }
+
+    @include laptop {
+      width: 50%;
+      max-width: 500px;
+    }
+
+    :global(.formLabel) {
+      top: 8px;
+    }
+
+    :global(.favoriteProfile) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__profiles {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    max-height: 500px;
+
+    ul {
+      // overflow-y: scroll;
+      max-height: 400px;
+      overflow: auto;
+      background: $light-grey;
+      padding: $unit-m;
+      row-gap: $unit-m;
+      margin: 0;
+      margin-bottom: $unit-xxl;
+
+      &:nth-of-type(1) {
+        padding-right: 0;
+      }
+
+      @include laptop {
+        margin-bottom: 0;
+
+        > div {
+          span {
+            color: #222222;
+            gap: $unit / 2;
+          }
+          > div {
+            > div:nth-of-type(3) {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+
+              > a {
+                width: auto;
+                height: auto;
+                margin-bottom: $unit;
+              }
+            }
+          }
+
+          h4 {
+            font-size: 12px;
+            margin: 0;
+          }
+
+          a {
+            width: 120px;
+            height: 120px;
+
+            > img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      > div:not(:last-of-type) {
+        margin-bottom: $unit-m;
+      }
+    }
+  }
+
+  &__search {
+    > div:nth-of-type(1) {
+      width: calc(100% - 44px);
+      max-width: 350px;
+      margin-left: auto;
+
+      @include tablet {
+        max-width: unset;
+      }
+
+      @include laptop {
+        width: calc(100% - 68px);
+        max-width: 350px;
+      }
+    }
+
+    &__dropdown {
+      background: $light-grey;
+      position: relative;
+      z-index: 1;
+      left: 0;
+      top: 0px;
+      width: 100vw;
+      transform: translateX(-20px);
+
+      @include laptop {
+        max-height: 400px;
+        width: 100%;
+        transform: translateX(0px);
+        z-index: 10;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        background: $light-grey;
+        padding: $unit-m;
+        padding-bottom: $unit-m;
+        height: 100%;
+        overflow-y: scroll;
+        height: 100%;
+        max-height: 330px;
+
+        @include laptop {
+          > div {
+            span {
+              color: #222222;
+              gap: $unit / 2;
+            }
+            > div {
+              > div:nth-of-type(3) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                > a {
+                  width: auto;
+                  height: auto;
+                  margin-bottom: $unit;
+                }
+              }
+            }
+
+            h4 {
+              font-size: 12px;
+              margin: 0;
+            }
+
+            a {
+              width: 120px;
+              height: 120px;
+
+              > img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+
+        > div:not(:last-of-type) {
+          margin-bottom: $unit-m;
+        }
+      }
+    }
+  }
+}

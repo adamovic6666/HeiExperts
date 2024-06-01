@@ -1,0 +1,42 @@
+.skills {
+  @include card($white);
+  margin-bottom: 0;
+  position: relative;
+  padding-bottom: 48px;
+  min-height: 362px;
+
+  p {
+    white-space: pre-wrap;
+    word-break: break-word;
+    > span {
+      background-color: transparent !important;
+    }
+  }
+
+  * {
+    color: $text-color !important;
+    font-family: $font-text !important;
+  }
+
+  @include laptop {
+    min-height: 362px;
+  }
+
+  :global(.editPen) {
+    bottom: 16px;
+    right: 8px;
+    top: unset;
+    width: max-content;
+    height: max-content;
+  }
+
+  &__edit {
+    top: unset;
+    bottom: 16px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}

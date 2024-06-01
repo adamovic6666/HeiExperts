@@ -1,0 +1,513 @@
+.profileCard {
+  max-width: $container;
+  margin: 0 auto;
+  @include card($white);
+
+  border-radius: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: ease-in-out all 0.1s;
+  visibility: visible;
+  opacity: 1;
+
+  @include laptop {
+    flex-direction: row;
+    padding-bottom: 16px;
+  }
+
+  &__hide {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+
+      @include laptop {
+        width: 400px;
+        height: max-content;
+      }
+    }
+  }
+
+  &__profil {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    &__tooltip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $red;
+      padding: 7px 7.5px;
+
+      &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+      }
+
+      > img {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        .profileCard__profil__tooltip__text {
+          visibility: visible;
+        }
+      }
+
+      &__text {
+        visibility: hidden;
+        position: absolute;
+        background-color: $red;
+        color: #fff;
+        font-size: 12px;
+        display: block;
+        left: $unit * 7;
+        top: 40%;
+        transform: translateY(-50%);
+        padding: $unit $unit * 2;
+        max-width: 180px;
+        text-align: center;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 60%;
+          right: 100%;
+          margin-top: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent $red transparent transparent;
+        }
+      }
+    }
+
+    @include laptop {
+      margin-left: 40px;
+    }
+
+    &__categories {
+      font-size: 16px;
+      line-height: 120%;
+      font-family: $font-title;
+      font-style: normal;
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: 0.03em;
+      margin-bottom: $unit * 2;
+      margin-top: $unit-m;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      @include laptop {
+        line-height: 120%;
+        max-width: 90%;
+        margin-top: 0;
+      }
+    }
+
+    &__gender {
+      color: #000;
+      /* H4 */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      /* 19.2px */
+      letter-spacing: 0.48px;
+    }
+
+    &__skills {
+      font-family: $font-text;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: $unit;
+      letter-spacing: 0.03em;
+      color: #000000;
+      align-items: center;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      > div:nth-of-type(1) {
+        line-height: 1.3;
+      }
+
+      p,
+      span {
+        font-size: 18px;
+        line-height: 1.3;
+
+        @include laptop {
+          font-size: 20px;
+          color: #222222;
+        }
+      }
+
+      @include laptop {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-top: 0px;
+        font-size: 16px;
+        max-width: 90%;
+      }
+
+      > div {
+        display: inline;
+        width: auto;
+
+        > p {
+          display: inline;
+        }
+      }
+
+      > div p {
+        font-weight: 500;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      span {
+        font-weight: 500;
+        background-color: transparent !important;
+      }
+
+      & > span {
+        font-weight: 800;
+        font-size: 18px;
+
+        @include laptop {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__categories {
+      @include laptop {
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+      }
+    }
+
+    &__gender {
+      font-family: $font-text;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: 0.03em;
+      color: #000000;
+      margin-bottom: $unit-s;
+
+      @include laptop {
+        font-weight: 500;
+      }
+    }
+
+    &__name {
+      border-bottom: 2px solid $red;
+      margin-top: $unit-xl;
+
+      width: 100%;
+
+      @include laptop {
+        padding-bottom: 6px;
+        margin-top: 0;
+
+        width: fit-content;
+        margin-bottom: $unit-m;
+      }
+    }
+
+    &__profession {
+      margin: 0 0 $unit-m;
+
+      @include laptop {
+        margin: $unit-l 0 $unit-xxl;
+      }
+    }
+
+    &__action__links {
+      display: flex;
+      width: 100%;
+      justify-content: end;
+      column-gap: $unit-m;
+
+      @include laptop {
+        width: auto;
+        column-gap: $unit-l;
+        justify-content: space-between;
+      }
+
+      margin-top: $unit-l;
+    }
+
+    &__external__links {
+      margin-top: $unit-xxl;
+      display: flex;
+      gap: $unit-m;
+      align-items: flex-end;
+      width: 100%;
+
+      > button {
+        margin-bottom: 0;
+        all: unset;
+        border: 1px solid $red;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 7.5px;
+        cursor: pointer;
+        transition: 0.3s all ease;
+
+        &:hover {
+          background-color: $red;
+
+          > img {
+            filter: brightness(0) invert(1);
+          }
+        }
+
+        > img {
+          width: 24px;
+          height: 24px;
+          transition: 0.3s all ease;
+        }
+      }
+
+      @include laptop {
+        margin-top: auto;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      > div {
+        margin-top: 0;
+
+        @include laptop {
+          margin-left: auto;
+          margin-right: 48px;
+        }
+
+        > a,
+        button {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__edit {
+    position: absolute;
+    bottom: $unit-m;
+    top: unset;
+  }
+}
+
+.profileCardFixed {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  right: 0;
+  transition: ease-in-out all 0.5s;
+  z-index: 10;
+  opacity: 1;
+  padding: 0 $unit-m;
+  display: none;
+
+  &__profil__approchableFor {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 0;
+    font-size: 16px;
+    max-width: 75%;
+
+    span {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    > div {
+      display: inline;
+
+      p {
+        font-weight: 500;
+        white-space: pre-wrap;
+        word-break: break-word;
+        display: inline;
+      }
+    }
+  }
+
+  @include laptop {
+    display: flex;
+    padding: $unit-m $unit-l;
+  }
+
+  @include card($white);
+  border-radius: 0;
+
+  &__show {
+    // opacity: 1;
+    top: 127px;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: $unit-m;
+    width: 100%;
+    max-width: $container-medium;
+    margin: 0 auto;
+    padding: 0 $unit-l;
+
+    @include laptop {
+      padding: 0;
+    }
+  }
+
+  &__image {
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &__profil {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: $unit-m;
+
+    &__name {
+      font-size: 16px;
+      margin: 0;
+      line-height: 1.6;
+      padding: 0;
+      border-bottom: 2px solid $red;
+      display: inline-block;
+    }
+
+    &__profession {
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.8;
+      font-weight: 400;
+
+      word-break: break-all;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      > p {
+        font-family: $font-text;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.03em;
+        color: #1a1a1a;
+      }
+    }
+
+    &__action__links {
+      display: flex;
+      gap: $unit-m;
+      align-items: flex-start;
+      margin-top: 0;
+
+      a,
+      button {
+        margin: 0;
+      }
+    }
+  }
+
+  &__edit {
+    position: relative;
+    top: unset;
+    right: unset;
+  }
+}
+
+.expanded {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow-y: auto;
+  margin-top: 0px;
+  font-size: 16px;
+  max-width: 100%;
+
+  > div {
+    * {
+      font-weight: 500 !important;
+      font-size: 20px !important;
+      color: #222222 !important;
+    }
+  }
+
+  @include laptop {
+    max-width: 85%;
+    -webkit-line-clamp: 8;
+    line-clamp: 8;
+  }
+}
+
+.showMoreLink {
+  color: #c61826;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+
+  @include laptop {
+    display: flex;
+  }
+}

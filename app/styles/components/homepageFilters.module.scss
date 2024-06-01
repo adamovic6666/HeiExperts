@@ -1,0 +1,49 @@
+.homepageFilters {
+  display: flex;
+  column-gap: 24px;
+  flex-direction: column;
+
+  @include laptop {
+    flex-direction: row;
+  }
+
+  & > div {
+    border-color: #222;
+
+    @include laptop {
+      max-width: 312px;
+      margin-bottom: 8px;
+    }
+  }
+
+  img {
+    margin-left: auto;
+  }
+
+  > button {
+    margin-left: auto;
+    cursor: pointer;
+    background-color: transparent;
+    color: $red;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $red;
+    gap: 10px;
+
+    &:hover {
+      background-color: $red;
+      color: #fff;
+
+      img {
+        transform: rotate(360deg);
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    > img {
+      margin: unset;
+      transition: ease all 0.3s;
+    }
+  }
+}

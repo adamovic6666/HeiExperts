@@ -1,0 +1,79 @@
+.ctdProfiles {
+  position: relative;
+  max-width: $container;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include laptop {
+    margin: 0 auto $unit-xxl * 2;
+    overflow: visible;
+  }
+
+  &>div>h3 {
+    padding: $unit-m;
+  }
+
+  &__profiles {
+    display: flex;
+    flex-flow: row wrap;
+    gap: $unit-m;
+  }
+
+  &__edit {
+    top: 16;
+  }
+
+  &__teaser__wrapper {
+    display: flex;
+    column-gap: $unit-l;
+    padding: $unit-m;
+
+    @include laptop {
+      padding: 0;
+    }
+
+    >div {
+      @include tablet {
+        max-width: 50% !important;
+        width: 50%;
+      }
+    }
+  }
+
+  :global(.swiper) {
+    position: relative;
+    padding: 0 $unit-m $unit-xxl;
+
+    @include laptop {
+      padding: 0;
+    }
+  }
+
+  :global(.arrow-prev),
+  :global(.arrow-next) {
+    background-color: $red;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 0px);
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  :global(.arrow-prev) {
+    left: -80px;
+  }
+
+  :global(.arrow-next) {
+    right: -80px;
+  }
+
+  :global(.arrow-prev.disabled),
+  :global(.arrow-next.disabled) {
+    opacity: 0.5;
+    cursor: auto;
+  }
+}

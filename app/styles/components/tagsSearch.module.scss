@@ -1,0 +1,137 @@
+.tagsSearch {
+  max-width: 500px;
+  margin-top: $unit-l;
+  position: relative;
+  min-height: 120px;
+
+  &__spinnerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+  }
+
+  :global(.lds-spinner) {
+    filter: invert(1);
+    transform: scale(0.5);
+  }
+
+  &__suggestions {
+    list-style: none;
+    display: flex;
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+
+    p {
+      color: #222222;
+      min-width: 140px;
+    }
+
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      > li {
+        color: $red;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+        padding: 0 8px;
+
+        &:hover {
+          background-color: $red;
+          color: white;
+        }
+      }
+    }
+  }
+
+  :global(.formText .formLabel) {
+    all: unset;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #545454;
+  }
+
+  :global(.formText:focus .formLabel) {
+    // transform: translate(0px, -4px);
+  }
+
+  :global(.formText__value .formLabel) {
+    // transform: translate(0px, -4px);
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 29px;
+    color: $red;
+    z-index: 2;
+  }
+
+  button {
+    border: none;
+    display: flex;
+    align-items: center;
+    column-gap: $unit;
+    color: #222;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    z-index: 0;
+
+    @include laptop {
+      top: 15px;
+
+      &:hover {
+        background-color: $red;
+        color: white;
+
+        > img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+
+  input {
+    margin-bottom: 0;
+    padding-left: 12px;
+  }
+
+  &__dropdown {
+    background: $light-grey;
+    position: absolute;
+    left: 0;
+    top: 57px;
+    width: 100%;
+    max-height: 120px;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 3;
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.03em;
+      color: #5e5e5e;
+      padding: $unit / 2 0 $unit / 2 $unit-m;
+      cursor: pointer;
+    }
+  }
+}

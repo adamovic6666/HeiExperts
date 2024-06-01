@@ -1,0 +1,33 @@
+.toastContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  bottom: unset;
+  left: $unit-m;
+  bottom: $unit-m;
+  font-size: 14px;
+  line-height: 120%;
+  width: 100%;
+  z-index: 100;
+
+  @include laptop {
+    left: $unit-xl;
+    bottom: $unit-xl;
+    font-size: $unit-m;
+  }
+}
+
+.toast {
+  padding: $unit $unit-m;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 $unit rgb(0 0 0 / 25%);
+  border-radius: $unit;
+  overflow: hidden;
+  max-width: 200px;
+
+  @include laptop {
+    padding: $unit-m;
+  }
+}

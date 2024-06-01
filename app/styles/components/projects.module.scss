@@ -1,0 +1,68 @@
+.projects {
+  @include card(#f4f1ea);
+  max-width: $container;
+
+  margin: 16px;
+
+  @include laptop {
+    margin: 0 auto;
+  }
+
+  :global(.editPen) {
+    bottom: 16px;
+    right: 8px;
+    top: unset;
+    width: max-content;
+    height: max-content;
+  }
+
+  position: relative;
+
+  &__content {
+    padding: 0 0 $unit-l;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $unit-m;
+  }
+
+  &__project {
+    background-color: white;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+    display: flex;
+    border-radius: 4px;
+    flex-direction: row;
+    overflow: hidden;
+
+    > span {
+      cursor: pointer;
+      padding: $unit-s 0 $unit-s $unit;
+
+      img {
+        display: block;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      padding: $unit;
+    }
+
+    &:hover {
+      background-color: $red;
+      color: white;
+
+      a {
+        text-decoration: none;
+      }
+
+      span {
+        color: $text-color-dark;
+      }
+    }
+  }
+
+  &__sym {
+    color: $red;
+  }
+}

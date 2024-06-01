@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
+  "rules": {
+    "declaration-no-important": true,
+    "selector-class-pattern": "^[a-z][a-z0-9A-Z_]*[a-z0-9]$"
+  }
+}

@@ -1,0 +1,409 @@
+.login {
+  overflow: hidden;
+
+  &__input__error {
+    border: 1px solid #ff0015 !important;
+  }
+
+  :global(.container) {
+    padding: 0;
+    margin: 0;
+
+    @include tablet {
+      padding: 0 $unit-m;
+      margin: 40px auto;
+    }
+
+    @include laptop {
+      padding: 0 $unit-m;
+      margin: 40px auto 80px;
+    }
+  }
+
+  &__dataProtection {
+    p {
+      margin-top: $unit-m;
+      font-size: 12px;
+      color: #545454;
+      letter-spacing: 0.03em;
+      @include laptop {
+        margin-top: $unit-l;
+      }
+
+      span {
+        color: #c61826;
+        font-size: 16px;
+      }
+    }
+    > div {
+      display: flex;
+      gap: $unit-m;
+
+      input {
+        border: 1px solid #6a6d71;
+        padding: $unit;
+      }
+
+      :global(.formTypeCheckbox) {
+        padding-top: 0;
+      }
+
+      :global(.formItem) {
+        flex: unset;
+
+        label {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__container {
+    @include tablet {
+      margin: $unit * 5 auto $unit * 10;
+    }
+  }
+
+  &__switch {
+    .login {
+      &__form {
+        &__register {
+          z-index: 2;
+
+          &__wrap {
+            transform: translate(0) scale(1);
+            height: auto;
+
+            form {
+              opacity: 1;
+
+              @include tablet {
+                transition-delay: 0.4s;
+              }
+            }
+          }
+
+          .login__red {
+            @include tablet {
+              transform: translate(0) scale(1);
+            }
+          }
+        }
+
+        &__login {
+          z-index: 1;
+
+          // opacity: 0;
+          &__wrap {
+            @include tablet {
+              transform: translate(100%) scale(0.5);
+              height: 0;
+              opacity: 0;
+
+              form {
+                opacity: 0;
+              }
+            }
+          }
+
+          .login__red {
+            @include tablet {
+              transform: translate(-100%) scale(0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    width: 200vw;
+    transition: all 0.5s ease-in-out;
+
+    &__move {
+      transform: translateX(-100vw);
+
+      @include tablet {
+        transform: translateX(0vw);
+      }
+    }
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      width: auto;
+      padding-top: 0;
+    }
+
+    @include laptop {
+      padding-top: $unit-xxl;
+    }
+
+    &__login {
+      width: 100vw;
+      flex: 0 0 50%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+      z-index: 2;
+
+      :global(.formTextInput) {
+        background-color: transparent;
+      }
+
+      @include tablet {
+        grid-column: 1;
+        grid-row: 1;
+        min-height: 800px;
+      }
+
+      &__wrap {
+        &__forgotPassword {
+          min-height: calc(100vh - 398px);
+
+          form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+          }
+
+          button {
+            margin-top: -$unit-m;
+          }
+
+          @include laptop {
+            min-height: calc(100vh - 412px);
+          }
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: $unit-l 20px;
+        flex: 0 0 50%;
+        transition: ease-in-out transform 0.5s;
+        transform: translate(0), scale(1);
+
+        h3 {
+          margin-bottom: $unit-m;
+        }
+
+        @include tablet {
+          padding: $unit-xl;
+
+          :global(.formTypeRadio) {
+            input,
+            label {
+              cursor: auto;
+            }
+          }
+        }
+
+        form {
+          opacity: 1;
+          transition-delay: 0.4s;
+        }
+      }
+
+      .login__red {
+        transform: translate(0), scale(1);
+      }
+
+      @include tablet {
+        flex-direction: row-reverse;
+        width: auto;
+      }
+    }
+
+    &__register {
+      z-index: 1;
+      flex: 0 0 50%;
+      width: 100vw;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      transition: ease-in-out all 0.5s;
+
+      @include tablet {
+        grid-column: 1;
+        grid-row: 1;
+        justify-content: center;
+      }
+
+      &__decreaseHeight {
+        height: 0px;
+
+        @include tablet {
+          height: auto;
+        }
+      }
+
+      &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px $unit-l;
+        flex: 0 0 50%;
+
+        :global(.radioButtons_wrap) {
+          display: flex;
+          flex-direction: column;
+          gap: $unit;
+          margin-top: $unit;
+
+          > div {
+            margin-bottom: 0;
+          }
+
+          @include tablet {
+            column-gap: $unit-l;
+            row-gap: $unit-s;
+            flex-direction: row;
+            margin-top: 0px;
+          }
+        }
+
+        @include tablet {
+          transition: ease-in-out transform 0.5s;
+          transform: translate(0) scale(0.5);
+          padding: $unit-xxl;
+        }
+
+        form {
+          opacity: 0;
+          transition: ease all 0.1s;
+        }
+      }
+
+      .login__red {
+        @include tablet {
+          transform: translate(100%) scale(0.7);
+        }
+      }
+
+      @include tablet {
+        flex-direction: row;
+        width: auto;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+
+  &__red {
+    display: flex;
+    flex-flow: column;
+    transition: ease-in-out transform 0.5s;
+    background-color: $red;
+    padding: $unit-l 20px;
+    // transform: translate(100%);
+    min-height: 200px;
+
+    @include tablet {
+      flex: 0 0 50%;
+      padding: $unit-xl;
+    }
+
+    > p:nth-of-type(1),
+    > p:nth-of-type(2) {
+      line-height: 120%;
+      color: #ffffff;
+    }
+
+    > p:nth-of-type(1) {
+      font-weight: 500;
+      font-size: $unit-m;
+
+      @include tablet {
+        font-size: 24px;
+      }
+    }
+
+    > p:nth-of-type(2) {
+      margin: $unit-l 0 $unit-xxl;
+      line-height: 130%;
+    }
+
+    h1 {
+      margin: 0 0 $unit-l;
+      color: white;
+      font-size: 32px;
+
+      @include tablet {
+        font-size: 40px;
+      }
+    }
+
+    img {
+      margin-top: $unit-xl;
+      display: none;
+      width: 100%;
+      margin-top: auto;
+
+      @include tablet {
+        height: 348px;
+        display: block;
+      }
+
+      @include laptop {
+        height: 478px;
+      }
+    }
+  }
+
+  &__forgotPassword {
+    background-color: transparent;
+    color: $text-color;
+    padding: 0;
+    font-family: $font-text;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #222222;
+    padding: 0 $unit-m;
+
+    &:hover {
+      background-color: transparent;
+      color: $red;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 16px;
+    margin: $unit * 3 0 0;
+
+    p {
+      margin-top: $unit;
+      font-family: $font-text;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #171717;
+    }
+  }
+}
+
+.register {
+  &__container {
+    margin: $unit * 10 auto;
+    display: flex;
+    flex-flow: row wrap;
+
+    > div {
+      flex: 0 0 50%;
+    }
+  }
+}

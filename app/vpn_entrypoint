@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Lnv3F78B7ch2YtPbPAjg" | openconnect --background --user=m8z --passwd-on-stdin --useragent=AnyConnect vpn-ac.urz.uni-heidelberg.de
+npm run start

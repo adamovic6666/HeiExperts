@@ -1,0 +1,55 @@
+.profilePopup {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  left: 0;
+  background-color: $white;
+  width: 318px;
+  display: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+  &__show {
+    display: block;
+  }
+
+  &__menu {
+    padding: $unit-m;
+
+    &__item {
+      padding: $unit-m $unit-l;
+      display: inline-block;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $light-grey;
+      }
+    }
+  }
+
+  &__logout {
+    border-top: 1px solid $light-grey;
+    padding: $unit-m $unit-l;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      margin-bottom: 0;
+    }
+  }
+
+  .activePath {
+    color: $red-text;
+    text-decoration: double;
+  }
+
+  .inactivePath {
+    color: $text-color-dark;
+  }
+}

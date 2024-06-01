@@ -1,0 +1,41 @@
+.favorites {
+  padding-top: $unit * 15;
+  z-index: 2;
+
+  >p {
+    margin-top: $unit-xxl;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__mainTitle {
+    text-shadow: 0 4px 8px #00000040;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    // margin-top: $unit*10;
+  }
+
+  &__profiles {
+    margin: $unit-l 0 $unit * 10;
+    display: flex;
+    justify-content: center;
+    gap: $unit-l;
+
+    >div {
+      width: 100%;
+      display: grid;
+      // grid-auto-rows: 1fr;
+      grid-template-columns: 1fr;
+      padding: $unit-m;
+
+      @include tablet {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}

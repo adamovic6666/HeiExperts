@@ -1,0 +1,64 @@
+.textAndImageParagraph {
+  background-color: white;
+  background-image: url('../assets/paragraphBg.png');
+  background-repeat: no-repeat;
+  background-position: top $unit-m right $unit-m;
+  background-size: 25.5%;
+  margin: $unit-xxl 0 $unit*10;
+  padding: $unit-xxl;
+
+  @include tablet {
+    padding: $unit-xxl $unit*10;
+
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      gap: $unit-xxl;
+    }
+
+
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      // max-width: 280px;
+      max-width: 300px;
+
+      @include tablet {
+        max-width: 280px;
+      }
+
+      @include laptop {
+        max-width: 350px;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding-top: $unit-xl;
+
+    @include laptop {
+      padding: $unit-xxl 0;
+    }
+  }
+
+  &__text {
+    margin: $unit-l 0;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+}
