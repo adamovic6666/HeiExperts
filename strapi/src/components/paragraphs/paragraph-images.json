@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_paragraphs_paragraph_images",
+  "info": {
+    "displayName": "Images",
+    "icon": "arrow-alt-circle-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

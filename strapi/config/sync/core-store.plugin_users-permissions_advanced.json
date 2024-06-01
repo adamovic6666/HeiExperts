@@ -1,0 +1,14 @@
+{
+  "key": "plugin_users-permissions_advanced",
+  "value": {
+    "unique_email": true,
+    "allow_register": true,
+    "email_confirmation": true,
+    "email_reset_password": "https://heiexperts.dev.studiopresent.cloud/user/reset-password",
+    "email_confirmation_redirection": "https://heiexperts.dev.studiopresent.cloud/user/auth?login=true",
+    "default_role": "authenticated"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

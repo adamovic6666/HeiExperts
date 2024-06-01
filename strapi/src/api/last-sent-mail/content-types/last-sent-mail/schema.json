@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "last_sent_mails",
+  "info": {
+    "singularName": "last-sent-mail",
+    "pluralName": "last-sent-mails",
+    "displayName": "LastSentMail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lastId": {
+      "type": "integer",
+      "required": false,
+      "default": 1
+    }
+  }
+}

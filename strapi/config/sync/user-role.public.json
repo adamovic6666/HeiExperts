@@ -1,0 +1,127 @@
+{
+  "name": "Public",
+  "description": "Default role given to unauthenticated user.",
+  "type": "public",
+  "permissions": [
+    {
+      "action": "api::basic-page.basic-page.find"
+    },
+    {
+      "action": "api::basic-page.basic-page.findOne"
+    },
+    {
+      "action": "api::category-item.category-item.find"
+    },
+    {
+      "action": "api::category-item.category-item.findOne"
+    },
+    {
+      "action": "api::category.category.find"
+    },
+    {
+      "action": "api::category.category.findOne"
+    },
+    {
+      "action": "api::data-protection-modal.data-protection-modal.find"
+    },
+    {
+      "action": "api::data-protection.data-protection.find"
+    },
+    {
+      "action": "api::easy-language.easy-language.find"
+    },
+    {
+      "action": "api::faq.faq.find"
+    },
+    {
+      "action": "api::front-page.front-page.find"
+    },
+    {
+      "action": "api::import-expert.import-expert.index"
+    },
+    {
+      "action": "api::imprint.imprint.find"
+    },
+    {
+      "action": "api::language.language.find"
+    },
+    {
+      "action": "api::language.language.findOne"
+    },
+    {
+      "action": "api::last-sent-mail.last-sent-mail.find"
+    },
+    {
+      "action": "api::last-sent-mail.last-sent-mail.update"
+    },
+    {
+      "action": "api::research-modal.research-modal.find"
+    },
+    {
+      "action": "api::social-icon.social-icon.find"
+    },
+    {
+      "action": "api::tag.tag.create"
+    },
+    {
+      "action": "api::tag.tag.find"
+    },
+    {
+      "action": "api::tag.tag.findOne"
+    },
+    {
+      "action": "api::translatable-user-field.translatable-user-field.create"
+    },
+    {
+      "action": "api::translatable-user-field.translatable-user-field.createLocalization"
+    },
+    {
+      "action": "api::translatable-user-field.translatable-user-field.find"
+    },
+    {
+      "action": "api::translatable-user-field.translatable-user-field.findOne"
+    },
+    {
+      "action": "api::translatable-user-field.translatable-user-field.update"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.connect"
+    },
+    {
+      "action": "plugin::users-permissions.auth.emailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.register"
+    },
+    {
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.sendEmailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.role.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.create"
+    },
+    {
+      "action": "plugin::users-permissions.user.find"
+    },
+    {
+      "action": "plugin::users-permissions.user.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
+    }
+  ]
+}

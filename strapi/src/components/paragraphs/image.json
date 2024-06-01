@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_paragraphs_images",
+  "info": {
+    "displayName": "image",
+    "icon": "camera",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

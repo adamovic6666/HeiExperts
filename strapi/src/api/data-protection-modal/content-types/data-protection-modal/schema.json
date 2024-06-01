@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "data_protection_modals",
+  "info": {
+    "singularName": "data-protection-modal",
+    "pluralName": "data-protection-modals",
+    "displayName": "DataProtectionModal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

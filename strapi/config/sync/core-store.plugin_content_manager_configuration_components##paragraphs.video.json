@@ -1,0 +1,76 @@
+{
+  "key": "plugin_content_manager_configuration_components::paragraphs.video",
+  "value": {
+    "uid": "paragraphs.video",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "youtube_link",
+      "defaultSortBy": "youtube_link",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "video": {
+        "edit": {
+          "label": "video",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "video",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "youtube_link": {
+        "edit": {
+          "label": "youtube_link",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "youtube_link",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "video",
+        "youtube_link"
+      ],
+      "edit": [
+        [
+          {
+            "name": "video",
+            "size": 6
+          },
+          {
+            "name": "youtube_link",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

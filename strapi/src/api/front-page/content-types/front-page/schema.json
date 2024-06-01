@@ -1,0 +1,72 @@
+{
+  "kind": "singleType",
+  "collectionName": "front_pages",
+  "info": {
+    "singularName": "front-page",
+    "pluralName": "front-pages",
+    "displayName": "FrontPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "topJoinUs": {
+      "displayName": "JoinUs",
+      "type": "component",
+      "repeatable": false,
+      "component": "front-components.join-us",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "aboutUs": {
+      "displayName": "AboutUs",
+      "type": "component",
+      "repeatable": false,
+      "component": "front-components.about-us",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "commonGoal": {
+      "displayName": "CommonGoal",
+      "type": "component",
+      "repeatable": false,
+      "component": "front-components.common-goal",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "bottomJoinUs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "front-components.join-us",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_front_components_aboutuses",
+  "info": {
+    "displayName": "AboutUs"
+  },
+  "options": {},
+  "attributes": {
+    "titleLeft": {
+      "type": "string",
+      "required": true
+    },
+    "titleRight": {
+      "type": "string",
+      "required": true
+    },
+    "previewLeft": {
+      "type": "string",
+      "required": true
+    },
+    "previewRight": {
+      "type": "string",
+      "required": true
+    },
+    "bodyLeft": {
+      "type": "richtext",
+      "required": true
+    },
+    "bodyRight": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

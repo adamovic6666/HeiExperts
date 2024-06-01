@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "data_protections",
+  "info": {
+    "singularName": "data-protection",
+    "pluralName": "data-protections",
+    "displayName": "DataProtection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "body": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

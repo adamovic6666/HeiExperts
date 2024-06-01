@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_paragraphs_paragraph_texts",
+  "info": {
+    "displayName": "Text",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

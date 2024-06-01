@@ -1,0 +1,366 @@
+{
+  "name": "Author",
+  "code": "strapi-author",
+  "description": "Authors can manage the content they have created.",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::basic-page.basic-page",
+      "properties": {
+        "fields": [
+          "title",
+          "paragraphs",
+          "showDate"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::basic-page.basic-page",
+      "properties": {
+        "fields": [
+          "title",
+          "paragraphs",
+          "showDate"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::basic-page.basic-page",
+      "properties": {
+        "fields": [
+          "title",
+          "paragraphs",
+          "showDate"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::category-item.category-item",
+      "properties": {
+        "fields": [
+          "label",
+          "category",
+          "categoryItems",
+          "users",
+          "hasParent"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::category-item.category-item",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::category-item.category-item",
+      "properties": {
+        "fields": [
+          "label",
+          "category",
+          "categoryItems",
+          "users",
+          "hasParent"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::category-item.category-item",
+      "properties": {
+        "fields": [
+          "label",
+          "category",
+          "categoryItems",
+          "users",
+          "hasParent"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "label",
+          "categoryItems"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::category.category",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "label",
+          "categoryItems"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "label",
+          "categoryItems"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::language.language",
+      "properties": {
+        "fields": [
+          "label"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::language.language",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::language.language",
+      "properties": {
+        "fields": [
+          "label"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::language.language",
+      "properties": {
+        "fields": [
+          "label"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "label"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::tag.tag",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "label"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "label"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::translation.translation",
+      "properties": {
+        "fields": [
+          "text",
+          "key"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::translation.translation",
+      "properties": {
+        "fields": [
+          "text",
+          "key"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::translation.translation",
+      "properties": {
+        "fields": [
+          "text",
+          "key"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "plugin::navigation.audience",
+      "properties": {
+        "fields": [
+          "name",
+          "key"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "plugin::navigation.audience",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "plugin::navigation.audience",
+      "properties": {
+        "fields": [
+          "name",
+          "key"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "plugin::navigation.audience",
+      "properties": {
+        "fields": [
+          "name",
+          "key"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::upload.configure-view",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    }
+  ]
+}

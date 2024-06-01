@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "research_modals",
+  "info": {
+    "singularName": "research-modal",
+    "pluralName": "research-modals",
+    "displayName": "ResearchModal"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBaloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

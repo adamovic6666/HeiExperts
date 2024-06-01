@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_education_educations",
+  "info": {
+    "displayName": "Education"
+  },
+  "options": {},
+  "attributes": {
+    "middle_school": {
+      "type": "string"
+    },
+    "university": {
+      "type": "string"
+    },
+    "doctorate": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_paragraphs_galleries",
+  "info": {
+    "displayName": "gallery",
+    "icon": "grip-horizontal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "gallery_images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

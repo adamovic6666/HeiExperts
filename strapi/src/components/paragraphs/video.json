@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_paragraphs_videos",
+  "info": {
+    "displayName": "video",
+    "icon": "film",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "youtube_link": {
+      "type": "string"
+    }
+  }
+}

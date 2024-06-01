@@ -1,0 +1,176 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "favorites": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "connectedTo": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "wikipediaLink": {
+      "type": "text"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female",
+        "Other",
+        "Not specified"
+      ],
+      "required": true
+    },
+    "categoryItems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category-item.category-item",
+      "inversedBy": "users"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "projects": {
+      "type": "dynamiczone",
+      "components": [
+        "project.project"
+      ]
+    },
+    "shortIntro": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::language.language"
+    },
+    "publishing": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "required": false,
+      "targetField": "username"
+    },
+    "linktree": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "firstTimeLogin": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "uniId": {
+      "type": "string"
+    },
+    "translatableFields": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::translatable-user-field.translatable-user-field",
+      "mappedBy": "user"
+    },
+    "experties": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "fullName": {
+      "type": "string",
+      "required": false
+    },
+    "instituteType": {
+      "type": "string"
+    }
+  }
+}

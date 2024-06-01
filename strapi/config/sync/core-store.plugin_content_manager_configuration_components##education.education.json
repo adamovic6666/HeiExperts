@@ -1,0 +1,97 @@
+{
+  "key": "plugin_content_manager_configuration_components::education.education",
+  "value": {
+    "uid": "education.education",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "middle_school",
+      "defaultSortBy": "middle_school",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "middle_school": {
+        "edit": {
+          "label": "middle_school",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "middle_school",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "university": {
+        "edit": {
+          "label": "university",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "university",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "doctorate": {
+        "edit": {
+          "label": "doctorate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "doctorate",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "middle_school",
+        "university",
+        "doctorate"
+      ],
+      "edit": [
+        [
+          {
+            "name": "middle_school",
+            "size": 6
+          },
+          {
+            "name": "university",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "doctorate",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

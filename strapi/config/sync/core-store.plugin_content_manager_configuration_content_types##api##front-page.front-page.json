@@ -1,0 +1,166 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::front-page.front-page",
+  "value": {
+    "uid": "api::front-page.front-page",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "topJoinUs": {
+        "edit": {
+          "label": "topJoinUs",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "topJoinUs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "aboutUs": {
+        "edit": {
+          "label": "aboutUs",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "aboutUs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "commonGoal": {
+        "edit": {
+          "label": "commonGoal",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "commonGoal",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "bottomJoinUs": {
+        "edit": {
+          "label": "bottomJoinUs",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bottomJoinUs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "title",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "topJoinUs",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "aboutUs",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "commonGoal",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "bottomJoinUs",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "topJoinUs",
+        "aboutUs",
+        "commonGoal"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

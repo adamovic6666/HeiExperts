@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basic_pages",
+  "info": {
+    "singularName": "basic-page",
+    "pluralName": "basic-pages",
+    "displayName": "Basic page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "paragraphs": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "paragraphs.gallery",
+        "paragraphs.image",
+        "paragraphs.link",
+        "paragraphs.paragraph-images",
+        "paragraphs.paragraph-text",
+        "paragraphs.paragraph-text-with-image",
+        "paragraphs.video"
+      ]
+    },
+    "showDate": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

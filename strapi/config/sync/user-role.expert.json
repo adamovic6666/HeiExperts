@@ -1,0 +1,58 @@
+{
+  "name": "Expert",
+  "description": "Professor role",
+  "type": "expert",
+  "permissions": [
+    {
+      "action": "api::basic-page.basic-page.find"
+    },
+    {
+      "action": "api::basic-page.basic-page.findOne"
+    },
+    {
+      "action": "api::category-item.category-item.find"
+    },
+    {
+      "action": "api::category-item.category-item.findOne"
+    },
+    {
+      "action": "api::category.category.find"
+    },
+    {
+      "action": "api::front-page.front-page.find"
+    },
+    {
+      "action": "api::language.language.find"
+    },
+    {
+      "action": "api::last-sent-mail.last-sent-mail.find"
+    },
+    {
+      "action": "api::last-sent-mail.last-sent-mail.update"
+    },
+    {
+      "action": "api::social-icon.social-icon.find"
+    },
+    {
+      "action": "api::tag.tag.find"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.user.create"
+    },
+    {
+      "action": "plugin::users-permissions.user.find"
+    },
+    {
+      "action": "plugin::users-permissions.user.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
+    }
+  ]
+}

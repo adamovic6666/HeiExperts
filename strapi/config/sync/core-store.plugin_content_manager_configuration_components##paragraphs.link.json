@@ -1,0 +1,97 @@
+{
+  "key": "plugin_content_manager_configuration_components::paragraphs.link",
+  "value": {
+    "uid": "paragraphs.link",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "title",
+      "defaultSortBy": "title",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "file": {
+        "edit": {
+          "label": "file",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "file",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "button_type": {
+        "edit": {
+          "label": "button_type",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "button_type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "file",
+        "button_type",
+        "title"
+      ],
+      "edit": [
+        [
+          {
+            "name": "file",
+            "size": 6
+          },
+          {
+            "name": "button_type",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "title",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

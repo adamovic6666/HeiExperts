@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "import_experts",
+  "info": {
+    "singularName": "import-expert",
+    "pluralName": "import-experts",
+    "displayName": "ImportExperts",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ImportExperts": {
+      "type": "boolean"
+    },
+    "ImportedExpert": {
+      "type": "string"
+    }
+  }
+}
